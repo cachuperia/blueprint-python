@@ -1,4 +1,5 @@
 """CLI configuration."""
+
 import os
 import sys
 

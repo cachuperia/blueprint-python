@@ -1,12 +1,12 @@
 """CLI tool."""
 
-from loguru import logger as log
 import typer
+from loguru import logger as log
 
 from .helpers.cfg import log_config
 
 cli = typer.Typer()
-log.configure(**log_config)
+log.configure(**log_config)  # type: ignore[arg-type]
 
 
 @cli.command()
