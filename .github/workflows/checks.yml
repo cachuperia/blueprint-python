@@ -3,17 +3,17 @@ on:
 
 jobs:
   pre-commit:
-    uses: cachuperia/github-reusable-workflows/.github/workflows/pre-commit.yml@v1.0.2
+    uses: cachuperia/github-reusable-workflows/.github/workflows/pre-commit.yml@v1.1.0
     with:
-      python-version: "3.10.5"
+      python-version: "3.11.8"
 
   commitlint:
-    uses: cachuperia/github-reusable-workflows/.github/workflows/commitlint.yml@v1.0.2
+    uses: cachuperia/github-reusable-workflows/.github/workflows/commitlint.yml@v1.1.0
 
   pytest:
-    uses: cachuperia/github-reusable-workflows/.github/workflows/pytest.yml@v1.0.2
+    uses: cachuperia/github-reusable-workflows/.github/workflows/pytest.yml@v1.1.0
     with:
-      python-version: "3.10.5"
+      python-version: "3.11.8"
       run-integration: true
 
   approve:
@@ -22,6 +22,6 @@ jobs:
       - pre-commit
       - commitlint
       - pytest
-    uses: cachuperia/github-reusable-workflows/.github/workflows/approve.yml@v1.0.2
+    uses: cachuperia/github-reusable-workflows/.github/workflows/approve.yml@v1.1.0
     secrets:
       token: ${{ secrets.AUTOMATION_GITHUB_TOKEN }}

@@ -15,3 +15,5 @@ __pycache__/
 .mypy_cache
 dist/
 pytest-coverage.txt
+
+cli-log.jsonl
